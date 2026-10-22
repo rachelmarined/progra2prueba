@@ -19,14 +19,14 @@ private static final int max_retiros_mes = 3;
     
     public boolean status(){
         Calendar fechaActual = Calendar.getInstance();
-        fechaActual.add(Calendar.MONTH, -6);
+        fechaActual.add(Calendar.MONTH,-6);
         return ultimaModif.after(fechaActual);
     }
     public void aplicarIntereses(){
         if(status()){
-            double intereses = saldo*tasa;
+            double intereses=saldo*tasa;
             depositar(intereses);
-            historial.add("intereses aplicados: *"+intereses);
+            historial.add("intereses aplicados*"+intereses);
         }
     }
 }
